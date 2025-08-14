@@ -5961,8 +5961,8 @@ cleanup:
 #define LFS_LOCK(cfg)   cfg->lock(cfg)
 #define LFS_UNLOCK(cfg) cfg->unlock(cfg)
 #else
-#define LFS_LOCK(cfg)   ((void)cfg, 0)
-#define LFS_UNLOCK(cfg) ((void)cfg)
+#define LFS_LOCK(cfg)   ((void)(cfg), 0)
+#define LFS_UNLOCK(cfg) ((void)(cfg))
 #endif
 
 // Public API
